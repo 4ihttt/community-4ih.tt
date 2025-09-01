@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>4ih.tt - Redes Oficiais</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/b2/c4/69/b2c46907798def8a6859d19c46d37b27.jpg" />
-
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- ícone do site -->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/1200x/10/c4/a4/10c4a429b3d47be9bd3566fdeb222324.jpg" />
 
     <!-- Fonte Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome (ícones das redes) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos -->
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
             color: #fff;
-            background: url('https://i.pinimg.com/originals/de/e7/85/dee7851208617e0febcb569fd10ded72.gif') no-repeat center center fixed;
+            background: url('https://i.pinimg.com/originals/6c/12/8f/6c128fe8d4a8b2ac6df1882f76c28a9b.gif') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -59,7 +60,7 @@
 
             .social-icons a {
                 color: #fff;
-                font-size: 24px;
+                font-size: 26px;
                 margin: 0 12px;
                 text-decoration: none;
                 transition: transform 0.2s, color 0.3s;
@@ -122,19 +123,22 @@
 <body>
 
     <div class="profile fade-in">
-        <img src="https://i.pinimg.com/736x/b2/c4/69/b2c46907798def8a6859d19c46d37b27.jpg" alt="Ícone Código" />
-        <h1>community baxones</h1>
-        <p>Conecte-se nas redes oficiais baxones1</p>
+        <img src="https://i.pinimg.com/736x/fd/f2/49/fdf2497e15c56e77a6318f95453e4364.jpg" alt="Ícone Perfil" />
+        <h1>Community Baxones</h1>
+        <p>Conecte-se nas redes oficiais</p>
 
         <div class="social-icons">
-            <a href="https://www.tiktok.com/@4ih.tt" target="_blank" title="TikTok">
-                <i class="fab fa-tiktok"></i>
+            <a href="https://www.youtube.com/@baxones01" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
             </a>
-            <a href="https://www.instagram.com/4ih.tt/" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
+            <a href="https://www.tiktok.com/@baxones1" target="_blank" title="TikTok">
+                <i class="fab fa-tiktok"></i>
             </a>
             <a href="https://discord.gg/NM8qNghrBt" target="_blank" title="Discord">
                 <i class="fab fa-discord"></i>
+            </a>
+            <a href="" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
             </a>
         </div>
     </div>
@@ -143,10 +147,13 @@
         <a class="link-button" href="https://discord.gg/NM8qNghrBt" target="_blank">
             <i class="fab fa-discord"></i> Entrar no Discord
         </a>
-        <a class="link-button" href="https://www.tiktok.com/@4ih.tt" target="_blank">
+        <a class="link-button" href="https://www.tiktok.com/@baxones1" target="_blank">
             <i class="fab fa-tiktok"></i> TikTok Oficial
         </a>
-        <a class="link-button" href="https://www.instagram.com/4ih.tt/" target="_blank">
+        <a class="link-button" href="https://www.youtube.com/@baxones01" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube Oficial
+        </a>
+        <a class="link-button" href="" target="_blank">
             <i class="fab fa-instagram"></i> Instagram Oficial
         </a>
     </div>
@@ -156,7 +163,7 @@
         <source src="https://cdn.pixabay.com/download/audio/2021/11/02/audio_29bb317b8c.mp3?filename=lofi-chill-11343.mp3" type="audio/mpeg" />
     </audio>
 
-    <!-- Script V1 -->
+    <!-- Script -->
     <script>
         const clickSound = new Audio('https://freesound.org/data/previews/256/256113_3263906-lq.mp3');
         clickSound.volume = 0.2;
@@ -165,7 +172,6 @@
             button.addEventListener('click', () => {
                 clickSound.currentTime = 0;
                 clickSound.play();
-
                 console.log(`Você clicou no link: ${button.textContent.trim()}`);
             });
         });
