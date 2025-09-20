@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>4ih.tt - Redes Oficiais</title>
+    <title>EASY OLX - Vendas Xiter & Likes</title>
 
-    <!-- ícone do site -->
     <link rel="icon" type="image/png" href="https://i.pinimg.com/1200x/10/c4/a4/10c4a429b3d47be9bd3566fdeb222324.jpg" />
-
-    <!-- Fonte Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome (ícones das redes) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Estilos -->
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
             color: #fff;
-            background: url('https://i.pinimg.com/originals/6c/12/8f/6c128fe8d4a8b2ac6df1882f76c28a9b.gif') no-repeat center center fixed;
+            background: url('https://i.pinimg.com/originals/1c/0d/76/1c0d76325056752663040b6dde953575.gif') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -124,38 +118,51 @@
 
     <div class="profile fade-in">
         <img src="https://i.pinimg.com/736x/fd/f2/49/fdf2497e15c56e77a6318f95453e4364.jpg" alt="Ícone Perfil" />
-        <h1>Community Baxones</h1>
-        <p>Conecte-se nas redes oficiais</p>
+        <h1>EASY OLX</h1>
+        <p>Vendas de Xiter, Likes e Serviços para Jogos</p>
 
         <div class="social-icons">
-            <a href="https://www.youtube.com/@baxones01" target="_blank" title="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.tiktok.com/@baxones1" target="_blank" title="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
             <a href="https://discord.gg/NM8qNghrBt" target="_blank" title="Discord">
                 <i class="fab fa-discord"></i>
             </a>
-            <a href="" target="_blank" title="Instagram">
+            <a href="https://www.instagram.com/4ih.ttt/" target="_blank" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
     </div>
 
     <div class="links fade-in">
-        <a class="link-button" href="https://discord.gg/NM8qNghrBt" target="_blank">
-            <i class="fab fa-discord"></i> Entrar no Discord
+        <a class="link-button" href="https://discord.gg/Q9qD2UbkjU" target="_blank">
+            LIKES FF 👍🏻
         </a>
-        <a class="link-button" href="https://www.tiktok.com/@baxones1" target="_blank">
-            <i class="fab fa-tiktok"></i> TikTok Oficial
+        <a class="link-button" href="https://wa.me/1365255693" target="_blank">
+             XITER iOS 👨🏻‍💻 🇪🇸
         </a>
-        <a class="link-button" href="https://www.youtube.com/@baxones01" target="_blank">
-            <i class="fab fa-youtube"></i> YouTube Oficial
+        <a class="link-button" href="https://wa.me/1365255693" target="_blank">
+            Outros Serviços 📚
         </a>
-        <a class="link-button" href="" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram Oficial
-        </a>
+    </div>
+
+    <!-- Botão Termos & Informações -->
+    <a href="#" id="terms-button" class="link-button" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; font-size: 14px;">
+        Termos & Informações
+    </a>
+
+    <!-- Modal -->
+    <div id="terms-modal" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999;">
+        <div style="background: rgba(0,0,0,0.9); padding: 25px; border-radius: 15px; max-width: 500px; width: 90%; text-align: left; position: relative; color: #fff;">
+            <h2 style="margin-top:0;">Termos e Informações</h2>
+            <p>
+            <p>
+                🔹 Todos os serviços oferecidos são rápidos, seguros e com suporte online.<br>
+                🔹 As vendas incluem XITER iOS, LIKES FF e outros serviços para jogos.<br>
+                🔹 O único perfil oficial para contato e suporte é o do grupo <strong>EASY OLX</strong> indicado neste site.<br>
+                🔹 Não realizamos golpes, vendas falsas ou qualquer atividade ilícita. Qualquer tentativa de utilizar nossos serviços ou imagem para golpes, fakes ou fraude não é de nossa responsabilidade e não estamos de acordo com tais práticas.<br>
+                🔹 Ao utilizar nossos serviços, você concorda com os termos descritos aqui e reconhece que todo suporte e transação deve ocorrer exclusivamente via grupo oficial.<br>
+                🔹 Contato para suporte e informações: WhatsApp ou Discord do grupo oficial.
+            </p>
+            <button id="close-modal" style="position: absolute; top:10px; right:10px; background: #ff4081; border: none; color:#fff; padding:5px 10px; border-radius:5px; cursor:pointer;">X</button>
+        </div>
     </div>
 
     <!-- Música ambiente -->
@@ -163,27 +170,50 @@
         <source src="https://cdn.pixabay.com/download/audio/2021/11/02/audio_29bb317b8c.mp3?filename=lofi-chill-11343.mp3" type="audio/mpeg" />
     </audio>
 
-    <!-- Script -->
+    <!-- Script V1 + V2 integrados -->
     <script>
+        const bgMusic = document.getElementById('bg-music');
         const clickSound = new Audio('https://freesound.org/data/previews/256/256113_3263906-lq.mp3');
         clickSound.volume = 0.2;
 
+        function playClickSound() {
+            clickSound.currentTime = 0;
+            clickSound.play().catch(err => console.warn("Erro ao tocar som:", err));
+        }
+
+        function startBackgroundMusic() {
+            if (bgMusic.muted) {
+                bgMusic.muted = false;
+                bgMusic.play().catch(err => console.warn("Erro ao iniciar música:", err));
+            }
+        }
+
         document.querySelectorAll('.link-button').forEach(button => {
             button.addEventListener('click', () => {
-                clickSound.currentTime = 0;
-                clickSound.play();
+                playClickSound();
+                startBackgroundMusic();
                 console.log(`Você clicou no link: ${button.textContent.trim()}`);
             });
         });
 
-        const bgMusic = document.getElementById('bg-music');
-        document.querySelectorAll('.link-button').forEach(button => {
-            button.addEventListener('click', () => {
-                if (bgMusic.muted) {
-                    bgMusic.muted = false;
-                    bgMusic.play();
-                }
-            }, { once: true });
+        // Modal funcionalidade
+        const termsButton = document.getElementById('terms-button');
+        const termsModal = document.getElementById('terms-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        termsButton.addEventListener('click', e => {
+            e.preventDefault();
+            termsModal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', () => {
+            termsModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', e => {
+            if (e.target == termsModal) {
+                termsModal.style.display = 'none';
+            }
         });
     </script>
 
