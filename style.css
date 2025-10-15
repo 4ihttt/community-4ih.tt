@@ -1,9 +1,9 @@
-body {
+﻿body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
-    background: url('https://i.pinimg.com/originals/b3/b7/62/b3b762851cf804ce56b93e9c94067027.gif') no-repeat center center fixed;
+    background: url('https://i.pinimg.com/originals/de/e7/85/dee7851208617e0febcb569fd10ded72.gif') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -11,6 +11,7 @@ body {
     cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1035.cur'), auto;
 }
 
+/* Perfil */
 .profile {
     margin-top: 60px;
     text-align: center;
@@ -20,39 +21,46 @@ body {
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        border: 3px solid #fff;
-        box-shadow: 0 0 20px rgba(255,255,255,0.4);
+        border: 3px solid #ff4fa8; /* borda rosa neon */
+        box-shadow: 0 0 25px rgba(255, 79, 168, 0.7);
     }
 
     .profile h1 {
         margin: 15px 0 5px;
         font-size: 28px;
-        text-shadow: 0 0 10px rgba(0,0,0,0.7);
+        color: #ff4fa8;
+        text-shadow: 0 0 12px rgba(255, 79, 168, 0.8);
     }
 
     .profile p {
         margin: 0;
         font-size: 14px;
+        color: #fff;
         opacity: 0.9;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
     }
 
+/* Ícones sociais */
 .social-icons {
     margin: 20px 0;
 }
 
     .social-icons a {
-        color: #fff;
+        color: #ff4fa8;
         font-size: 22px;
         margin: 0 10px;
         text-decoration: none;
         transition: transform 0.2s, color 0.3s;
+        text-shadow: 0 0 10px rgba(255, 79, 168, 0.8);
     }
 
         .social-icons a:hover {
             transform: scale(1.2);
-            color: #ff4081; /* cor de destaque no hover */
+            color: #fff;
+            text-shadow: 0 0 20px #fff;
         }
 
+/* Botões principais */
 .links {
     width: 90%;
     max-width: 400px;
@@ -64,18 +72,20 @@ body {
 
 .link-button {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px); /* efeito glass */
+    backdrop-filter: blur(6px);
     padding: 15px 20px;
-    border-radius: 25px; /* cantos arredondados */
+    border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #fff;
+    color: #ff4fa8;
     font-weight: 600;
     font-size: 16px;
+    letter-spacing: 0.4px;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 8px rgba(255, 79, 168, 0.8);
 }
 
     .link-button i {
@@ -84,12 +94,15 @@ body {
     }
 
     .link-button:hover {
-        background: rgba(255, 64, 129, 0.3);
-        border-color: #ff4081;
-        box-shadow: 0 0 15px rgba(255,64,129,0.6);
+        background: rgba(255, 79, 168, 0.3);
+        border-color: #ff4fa8;
+        color: #fff;
+        text-shadow: 0 0 12px #fff;
+        box-shadow: 0 0 20px rgba(255, 79, 168, 0.9);
         transform: translateY(-2px);
     }
 
+/* Animação de entrada */
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s forwards;

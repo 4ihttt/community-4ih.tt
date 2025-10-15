@@ -1,8 +1,8 @@
-ï»¿// Som de clique
+// Som de clique
 const clickSound = new Audio('https://freesound.org/data/previews/256/256113_3263906-lq.mp3');
 clickSound.volume = 0.2;
 
-// Adiciona evento em todos os botÃµes
+// Adiciona evento em todos os botões
 document.querySelectorAll('.link-button').forEach(button => {
     button.addEventListener('click', () => {
         try {
@@ -14,6 +14,6 @@ document.querySelectorAll('.link-button').forEach(button => {
             console.error("Erro ao tentar reproduzir o som:", error);
         }
 
-        console.log(`VocÃª clicou no link: ${button.textContent.trim()}`);
+        console.log(`Você clicou no link: ${button.textContent.trim()}`);
     });
 });
